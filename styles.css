@@ -1,0 +1,60 @@
+/* General Styling */
+body {
+  font-family: Arial, sans-serif;
+  padding: 20px;
+  transition: background-color 0.3s ease;
+}
+
+button {
+  margin: 10px 0;
+  padding: 10px 15px;
+  cursor: pointer;
+}
+
+/* Part 1: Transition and Keyframe Animation */
+#box {
+  width: 100px;
+  height: 100px;
+  background-color: steelblue;
+  margin-top: 20px;
+  transition: transform 0.5s ease;
+}
+
+#box.animate {
+  transform: rotate(180deg) scale(1.5);
+}
+
+/* Keyframe Animation Example */
+@keyframes slideIn {
+  from {
+    transform: translateY(-200px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+/* Part 3: Modal Styling + Animation */
+#modal {
+  position: fixed;
+  top: 20%;
+  left: 50%;
+  transform: translateX(-50%);
+  background: white;
+  border: 1px solid #ccc;
+  padding: 20px;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.4s ease;
+}
+
+#modal.show {
+  animation: slideIn 0.5s forwards;
+  pointer-events: auto;
+}
+
+.hidden {
+  display: none;
+}
